@@ -99,7 +99,7 @@ def gen(fn):
                                       int(256*rgba[1]),
                                       int(256*rgba[2]),
                                       int(256*rgba[3])))
-    img.save(fn+".PNG", 'PNG')
+    img.save(fn+".png", 'PNG')
     print "max=",gfmax
 
 if __name__ == "__main__":
