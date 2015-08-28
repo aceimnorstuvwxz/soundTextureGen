@@ -82,6 +82,11 @@ def gen(fn):
         end_index = start_index + FFT_SCOPE
         if  end_index >= len(s1):
             end_index = len(s1)-1
+            
+        if (start_index > 0.5*FFT_STEP):
+            start_index -= 0.5*FFT_STEP
+            end_index -= 0.5*FFT_STEP
+
         fft_data = s1[start_index:end_index]
         fft_ret = genfft(fft_data)
 #         print len(fft_ret)
